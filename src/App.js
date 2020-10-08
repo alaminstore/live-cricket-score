@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import Navbar from "./components/Navbar";
 import MyCard from "./components/MyCard";
 import getMatches from "./api/Api";
@@ -21,9 +21,16 @@ function App() {
       <Button variant="outlined" color="primary">
         Primary
       </Button>
-      {Matches.map((match) => (
-        <MyCard match="match" />
-      ))}
+
+      <Grid container>
+        <Grid sm="3"></Grid>
+        <Grid sm="6">
+          {Matches.map((match) => (
+            <MyCard match="match" />
+          ))}
+        </Grid>
+        <Grid sm="3"></Grid>
+      </Grid>
     </div>
   );
 }
