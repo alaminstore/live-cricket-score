@@ -4,12 +4,12 @@ import React from "react";
 
 function Navbar() {
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="default">
       <Toolbar>
         <IconButton color="inherit">
           <MenuIcon />
         </IconButton>
-        <Typography>Live Score</Typography>
+        <Typography variant="h6">Live Score</Typography>
       </Toolbar>
     </AppBar>
   );
