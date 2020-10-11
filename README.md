@@ -1,8 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Run Command 
+###### Screenshots
 
-In the project directory, you can run:
+<img src="https://github.com/alaminstore/live-cricket-score/blob/main/screenshots/score.png">
+<img src="https://github.com/alaminstore/live-cricket-score/blob/main/screenshots/score_show.png">
 
 
 
