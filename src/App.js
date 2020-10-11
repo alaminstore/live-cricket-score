@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { Button, Grid } from "@material-ui/core";
+import {Grid, Typography } from "@material-ui/core";
 import Navbar from "./components/Navbar";
 import MyCard from "./components/MyCard";
 import getMatches from "./api/Api";
+
 function App() {
   const [Matches, setMatches] = useState([]);
   useEffect(() => {
@@ -17,19 +18,18 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <h3>Cricket Live Score</h3>
-      <Button variant="outlined" color="primary">
-        Primary
-      </Button>
-
-      <Grid container>
-        <Grid sm="3"></Grid>
-        <Grid sm="6">
+      <Typography variant="h3" style={{ marginTop: 10 }}>
+        Cricket Live Score
+      </Typography>{" "}
+      <Grid container  direction="row">
+        <Grid item md={3} sm={0} xs={0}></Grid>
+        <Grid item md={6} sm={12} xs={12}>
           {Matches.map((match) => (
-            <MyCard match="match" />
+            <MyCard key={match.unique_id} match={match} />
           ))}
         </Grid>
-        <Grid sm="3"></Grid>
+        <Grid item md={3} sm={0} xs={0}></Grid>
+        
       </Grid>
     </div>
   );
